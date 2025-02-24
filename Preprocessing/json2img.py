@@ -58,7 +58,7 @@ for json_file in os.listdir(json_folder):
         # 정규화된 좌표를 실제 픽셀 좌표로 변환 후 중복 제거
         polygon_pixels = list(set((round(x * width), round(y * height)) for x, y in polygon))
 
-        # ⚠️ 최소 3개 좌표가 없으면 스킵
+        # 최소 3개 좌표가 없으면 스킵
         if len(polygon_pixels) < 3:
             print(f"Warning: Polygon with {len(polygon_pixels)} points in {json_file} skipped.")
             continue
